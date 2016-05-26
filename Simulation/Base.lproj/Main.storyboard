@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simulation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,182 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYf-vg-CKV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="开始实验">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startSimulation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xht-jM-fo6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgP-4c-NJL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="打印数据">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopSimulation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIO-ko-eh3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4s-jY-R1t">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="产生Cloudlet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateCloudlets:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htC-g5-c0X"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0j-6u-eut">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ppa-33-Cgu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ppa-33-Cgu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Ppa-33-Cgu"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="产生Cloudlet时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDa-XQ-TcF">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="myp-Ia-rsA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="myp-Ia-rsA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="myp-Ia-rsA"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n0j-6u-eut" firstAttribute="centerX" secondItem="g4s-jY-R1t" secondAttribute="centerX" id="0l7-gj-RYn"/>
+                            <constraint firstAttribute="bottom" secondItem="zDa-XQ-TcF" secondAttribute="bottom" constant="275" id="128-vr-pAA"/>
+                            <constraint firstItem="FgP-4c-NJL" firstAttribute="top" secondItem="zDa-XQ-TcF" secondAttribute="bottom" constant="26" id="2Ox-Al-jfu"/>
+                            <constraint firstItem="rYf-vg-CKV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="117" id="7eq-Jf-Ih3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rYf-vg-CKV" secondAttribute="trailing" constant="76" id="G2M-5y-PNu"/>
+                            <constraint firstItem="n0j-6u-eut" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GOB-zz-cVc"/>
+                            <constraint firstItem="FgP-4c-NJL" firstAttribute="top" secondItem="zDa-XQ-TcF" secondAttribute="bottom" constant="40" id="Gdu-PV-Vzy"/>
+                            <constraint firstItem="rYf-vg-CKV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="RJM-TC-pE2"/>
+                            <constraint firstItem="n0j-6u-eut" firstAttribute="centerX" secondItem="FgP-4c-NJL" secondAttribute="centerX" id="UxB-Wx-Bid"/>
+                            <constraint firstItem="zDa-XQ-TcF" firstAttribute="top" secondItem="g4s-jY-R1t" secondAttribute="bottom" constant="-7" id="WQp-xe-bxF"/>
+                            <constraint firstItem="g4s-jY-R1t" firstAttribute="top" secondItem="n0j-6u-eut" secondAttribute="bottom" constant="54" id="Wha-Cs-Ggl"/>
+                            <constraint firstItem="zDa-XQ-TcF" firstAttribute="trailing" secondItem="n0j-6u-eut" secondAttribute="trailing" id="ZUM-yZ-TL2"/>
+                            <constraint firstItem="zDa-XQ-TcF" firstAttribute="leading" secondItem="n0j-6u-eut" secondAttribute="leading" id="afB-NS-rOv"/>
+                            <constraint firstItem="n0j-6u-eut" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ca1-9Y-Bb8"/>
+                            <constraint firstItem="zDa-XQ-TcF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eAM-Xc-mh0"/>
+                            <constraint firstItem="zDa-XQ-TcF" firstAttribute="top" secondItem="g4s-jY-R1t" secondAttribute="bottom" constant="-21" id="jqf-XE-i8R">
+                                <variation key="widthClass=compact" constant="8" symbolic="YES"/>
+                            </constraint>
+                            <constraint firstItem="zDa-XQ-TcF" firstAttribute="bottom" secondItem="g4s-jY-R1t" secondAttribute="bottom" id="kQS-I8-QyD"/>
+                            <constraint firstItem="zDa-XQ-TcF" firstAttribute="top" secondItem="n0j-6u-eut" secondAttribute="bottom" constant="85" id="qE9-2O-6bF">
+                                <variation key="widthClass=compact" constant="65"/>
+                            </constraint>
+                            <constraint firstItem="n0j-6u-eut" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="163" id="r1C-jC-KmE">
+                                <variation key="widthClass=compact" constant="163"/>
+                            </constraint>
+                            <constraint firstItem="n0j-6u-eut" firstAttribute="bottom" secondItem="rYf-vg-CKV" secondAttribute="bottom" id="two-U2-NCI"/>
+                            <constraint firstItem="zDa-XQ-TcF" firstAttribute="trailing" secondItem="n0j-6u-eut" secondAttribute="trailing" id="xJm-bW-fGU"/>
+                            <constraint firstItem="zDa-XQ-TcF" firstAttribute="leading" secondItem="n0j-6u-eut" secondAttribute="leading" id="zxK-Jt-w2f"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="rYf-vg-CKV"/>
+                                <exclude reference="FgP-4c-NJL"/>
+                                <exclude reference="g4s-jY-R1t"/>
+                                <exclude reference="n0j-6u-eut"/>
+                                <exclude reference="zDa-XQ-TcF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7eq-Jf-Ih3"/>
+                                <exclude reference="G2M-5y-PNu"/>
+                                <exclude reference="RJM-TC-pE2"/>
+                                <exclude reference="0l7-gj-RYn"/>
+                                <exclude reference="GOB-zz-cVc"/>
+                                <exclude reference="UxB-Wx-Bid"/>
+                                <exclude reference="ca1-9Y-Bb8"/>
+                                <exclude reference="r1C-jC-KmE"/>
+                                <exclude reference="two-U2-NCI"/>
+                                <exclude reference="128-vr-pAA"/>
+                                <exclude reference="WQp-xe-bxF"/>
+                                <exclude reference="ZUM-yZ-TL2"/>
+                                <exclude reference="afB-NS-rOv"/>
+                                <exclude reference="eAM-Xc-mh0"/>
+                                <exclude reference="jqf-XE-i8R"/>
+                                <exclude reference="kQS-I8-QyD"/>
+                                <exclude reference="qE9-2O-6bF"/>
+                                <exclude reference="xJm-bW-fGU"/>
+                                <exclude reference="zxK-Jt-w2f"/>
+                                <exclude reference="Wha-Cs-Ggl"/>
+                                <exclude reference="2Ox-Al-jfu"/>
+                                <exclude reference="Gdu-PV-Vzy"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="rYf-vg-CKV"/>
+                                <include reference="FgP-4c-NJL"/>
+                                <include reference="g4s-jY-R1t"/>
+                                <include reference="n0j-6u-eut"/>
+                                <include reference="zDa-XQ-TcF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7eq-Jf-Ih3"/>
+                                <include reference="G2M-5y-PNu"/>
+                                <include reference="RJM-TC-pE2"/>
+                                <include reference="0l7-gj-RYn"/>
+                                <include reference="GOB-zz-cVc"/>
+                                <include reference="UxB-Wx-Bid"/>
+                                <include reference="ca1-9Y-Bb8"/>
+                                <include reference="r1C-jC-KmE"/>
+                                <include reference="two-U2-NCI"/>
+                                <exclude reference="128-vr-pAA"/>
+                                <exclude reference="WQp-xe-bxF"/>
+                                <exclude reference="ZUM-yZ-TL2"/>
+                                <exclude reference="afB-NS-rOv"/>
+                                <include reference="eAM-Xc-mh0"/>
+                                <exclude reference="jqf-XE-i8R"/>
+                                <exclude reference="kQS-I8-QyD"/>
+                                <include reference="qE9-2O-6bF"/>
+                                <include reference="xJm-bW-fGU"/>
+                                <include reference="zxK-Jt-w2f"/>
+                                <include reference="Wha-Cs-Ggl"/>
+                                <include reference="2Ox-Al-jfu"/>
+                                <exclude reference="Gdu-PV-Vzy"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="cloudletTimeLabel" destination="zDa-XQ-TcF" id="E1S-Yl-e8y"/>
+                        <outlet property="timeLabel" destination="n0j-6u-eut" id="m1k-cc-j9E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="369" y="432"/>
         </scene>
     </scenes>
 </document>

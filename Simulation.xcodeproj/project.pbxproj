@@ -13,6 +13,13 @@
 		680C7BCB1B9EC64600FC6DAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 680C7BCA1B9EC64600FC6DAA /* Images.xcassets */; };
 		680C7BCE1B9EC64600FC6DAA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680C7BCC1B9EC64600FC6DAA /* LaunchScreen.xib */; };
 		680C7BDA1B9EC64600FC6DAA /* SimulationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680C7BD91B9EC64600FC6DAA /* SimulationTests.swift */; };
+		680C7BE51B9EC6B300FC6DAA /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680C7BE41B9EC6B300FC6DAA /* MUser.swift */; };
+		680C7BE71B9EC6F800FC6DAA /* AP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680C7BE61B9EC6F800FC6DAA /* AP.swift */; };
+		680C7BE91B9EC71700FC6DAA /* Cloudlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680C7BE81B9EC71700FC6DAA /* Cloudlet.swift */; };
+		685977241BA19F4E00762116 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685977231BA19F4E00762116 /* Manager.swift */; };
+		685C088A1BAD3B41004BFD0A /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685C08891BAD3B41004BFD0A /* Dijkstra.swift */; };
+		68C54FBF1BA01F6A00A5DECE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C54FBE1BA01F6A00A5DECE /* Task.swift */; };
+		68F6E4D81BE8E49400956E7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F6E4D71BE8E49400956E7F /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		680C7BD31B9EC64600FC6DAA /* SimulationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		680C7BD81B9EC64600FC6DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		680C7BD91B9EC64600FC6DAA /* SimulationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationTests.swift; sourceTree = "<group>"; };
+		680C7BE41B9EC6B300FC6DAA /* MUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
+		680C7BE61B9EC6F800FC6DAA /* AP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AP.swift; sourceTree = "<group>"; };
+		680C7BE81B9EC71700FC6DAA /* Cloudlet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloudlet.swift; sourceTree = "<group>"; };
+		685977231BA19F4E00762116 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		685C08891BAD3B41004BFD0A /* Dijkstra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
+		68C54FBE1BA01F6A00A5DECE /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		68F6E4D71BE8E49400956E7F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,7 @@
 		680C7BC01B9EC64600FC6DAA /* Simulation */ = {
 			isa = PBXGroup;
 			children = (
+				680C7BE31B9EC66C00FC6DAA /* Model */,
 				680C7BC31B9EC64600FC6DAA /* AppDelegate.swift */,
 				680C7BC51B9EC64600FC6DAA /* ViewController.swift */,
 				680C7BC71B9EC64600FC6DAA /* Main.storyboard */,
@@ -110,6 +125,20 @@
 				680C7BD81B9EC64600FC6DAA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		680C7BE31B9EC66C00FC6DAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				680C7BE41B9EC6B300FC6DAA /* MUser.swift */,
+				680C7BE61B9EC6F800FC6DAA /* AP.swift */,
+				680C7BE81B9EC71700FC6DAA /* Cloudlet.swift */,
+				68C54FBE1BA01F6A00A5DECE /* Task.swift */,
+				685977231BA19F4E00762116 /* Manager.swift */,
+				685C08891BAD3B41004BFD0A /* Dijkstra.swift */,
+				68F6E4D71BE8E49400956E7F /* Constants.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +185,8 @@
 		680C7BB61B9EC64600FC6DAA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "郝赟";
 				TargetAttributes = {
 					680C7BBD1B9EC64600FC6DAA = {
@@ -212,8 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680C7BE71B9EC6F800FC6DAA /* AP.swift in Sources */,
+				680C7BE91B9EC71700FC6DAA /* Cloudlet.swift in Sources */,
 				680C7BC61B9EC64600FC6DAA /* ViewController.swift in Sources */,
+				680C7BE51B9EC6B300FC6DAA /* MUser.swift in Sources */,
+				685977241BA19F4E00762116 /* Manager.swift in Sources */,
+				685C088A1BAD3B41004BFD0A /* Dijkstra.swift in Sources */,
+				68C54FBF1BA01F6A00A5DECE /* Task.swift in Sources */,
 				680C7BC41B9EC64600FC6DAA /* AppDelegate.swift in Sources */,
+				68F6E4D81BE8E49400956E7F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +313,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -291,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -330,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,7 +381,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Simulation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haoyun.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -353,7 +393,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Simulation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haoyun.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -372,6 +414,7 @@
 				);
 				INFOPLIST_FILE = SimulationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haoyun.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simulation.app/Simulation";
 			};
@@ -387,6 +430,7 @@
 				);
 				INFOPLIST_FILE = SimulationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haoyun.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simulation.app/Simulation";
 			};
@@ -411,6 +455,7 @@
 				680C7BDF1B9EC64600FC6DAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		680C7BE01B9EC64600FC6DAA /* Build configuration list for PBXNativeTarget "SimulationTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +464,7 @@
 				680C7BE21B9EC64600FC6DAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
